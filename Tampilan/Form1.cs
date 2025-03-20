@@ -15,7 +15,7 @@ namespace Tampilan
 {
     public partial class Form1 : Form
     {
-        private string connectionString = "Data Source=DESKTOP-K2MUUDE\\ZAKYMALIKA; Initial Catalog=MahasiswaDB;Integrated Security =True";
+        private string connectionString = "Data Source=DESKTOP-K2MUUDE\\ZAKYMALIKA; Initial Catalog=MahasiswaDB;Integrated Security =True"; 
         public Form1()
         {
             InitializeComponent();
