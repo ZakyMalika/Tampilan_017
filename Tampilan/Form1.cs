@@ -170,7 +170,7 @@ namespace Tampilan
                         MessageBoxIcon.Warning
                     );
                 }
-            }
+            }   
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -192,6 +192,66 @@ namespace Tampilan
                 txtEmail.Text = row.Cells[2].Value?.ToString();
                 txtTelepon.Text = row.Cells[3].Value?.ToString();
                 txtAlamat.Text = row.Cells[4].Value?.ToString();
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtNIM.Text))
+            {
+                MessageBox.Show("Pilih data yang akan diupdate!", "Peringatan",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    if (txtNIM.Text == "" || txtNama.Text == "" || txtEmail.Text == "" ||
+                        txtTelepon.Text == "" || txtAlamat.Text == "")
+                    {
+                        MessageBox.Show("Harap isi semua data!", "Peringatan",
+                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    conn.Open();
+                    string query = @"UPDATE Mahasiswa 
+                                   SET Nama = @Nama, 
+                                       Email = @Email, 
+                                       Telepon = @Telepon, 
+                                       Alamat = @Alamat 
+                                   WHERE NIM = @NIM";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@NIM", txtNIM.Text.Trim());
+                        cmd.Parameters.AddWithValue("@Nama", txtNama.Text.Trim());
+                        cmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
+                        cmd.Parameters.AddWithValue("@Telepon", txtTelepon.Text.Trim());
+                        cmd.Parameters.AddWithValue("@Alamat", txtAlamat.Text.Trim());
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Data berhasil diupdate!", "Sukses",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LoadData();
+                            ClearForm();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Data gagal diupdate!", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Kesalahan",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }
