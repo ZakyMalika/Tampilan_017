@@ -43,7 +43,7 @@ namespace Tampilan
                 try
                 {
                     connection.Open();
-                    string query = "Select NIM, Nama , Email, telepon, " + "Alamat from Mahasiswa";
+                    string query = "Select NIM, Nama , Email, telepon, " + "Alamat from Mahasiswa"; 
                     SqlDataAdapter da = new SqlDataAdapter(query, connection);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
