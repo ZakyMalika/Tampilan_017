@@ -65,7 +65,7 @@ namespace Tampilan
 
         }
 
-        private void btnCreate_Click(object sender, EventArgs e)
+        private void btnCreate_Click(object sender, EventArgs e) 
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
