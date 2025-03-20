@@ -195,7 +195,7 @@ namespace Tampilan
             }
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e) 
         {
             if (string.IsNullOrEmpty(txtNIM.Text))
             {
