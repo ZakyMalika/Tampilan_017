@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
 
 
-namespace Tampilan
+namespace Tampilan 
 {
     public partial class Form1 : Form
     {
