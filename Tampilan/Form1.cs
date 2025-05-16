@@ -211,11 +211,13 @@ namespace Tampilan
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (var openFile = new OpenFileDialog())
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Excel Files|.xlsx;.xlsm";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                openFile.Filter = "Excel Files|.xlsx;.xlsm";
-                if (openFile.ShowDialog() == DialogResult.OK)
-                    PreviewData(openFile.FileName);
+               
+               string filePath = openFileDialog.FileName;
+               PreviewData(filePath);
             }
         }
 

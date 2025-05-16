@@ -17,6 +17,7 @@ namespace Tampilan
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormOrganisasi());
+            Application.Run(new Form1());
         }
     }
 }
