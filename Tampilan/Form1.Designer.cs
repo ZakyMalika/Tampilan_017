@@ -43,6 +43,8 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.dgvMahasiswa = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMahasiswa)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +52,7 @@
             // 
             this.NIM.AutoSize = true;
             this.NIM.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NIM.Location = new System.Drawing.Point(226, 44);
+            this.NIM.Location = new System.Drawing.Point(68, 37);
             this.NIM.Name = "NIM";
             this.NIM.Size = new System.Drawing.Size(99, 41);
             this.NIM.TabIndex = 0;
@@ -58,7 +60,7 @@
             // 
             // txtNIM
             // 
-            this.txtNIM.Location = new System.Drawing.Point(233, 88);
+            this.txtNIM.Location = new System.Drawing.Point(75, 81);
             this.txtNIM.Multiline = true;
             this.txtNIM.Name = "txtNIM";
             this.txtNIM.Size = new System.Drawing.Size(455, 33);
@@ -66,7 +68,7 @@
             // 
             // txtNama
             // 
-            this.txtNama.Location = new System.Drawing.Point(233, 166);
+            this.txtNama.Location = new System.Drawing.Point(75, 159);
             this.txtNama.Multiline = true;
             this.txtNama.Name = "txtNama";
             this.txtNama.Size = new System.Drawing.Size(455, 33);
@@ -76,7 +78,7 @@
             // 
             this.Nama.AutoSize = true;
             this.Nama.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nama.Location = new System.Drawing.Point(226, 122);
+            this.Nama.Location = new System.Drawing.Point(68, 115);
             this.Nama.Name = "Nama";
             this.Nama.Size = new System.Drawing.Size(113, 41);
             this.Nama.TabIndex = 2;
@@ -84,7 +86,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(233, 246);
+            this.txtEmail.Location = new System.Drawing.Point(75, 239);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(455, 33);
@@ -94,7 +96,7 @@
             // 
             this.Email.AutoSize = true;
             this.Email.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email.Location = new System.Drawing.Point(226, 202);
+            this.Email.Location = new System.Drawing.Point(68, 195);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(116, 41);
             this.Email.TabIndex = 4;
@@ -102,7 +104,7 @@
             // 
             // txtTelepon
             // 
-            this.txtTelepon.Location = new System.Drawing.Point(233, 326);
+            this.txtTelepon.Location = new System.Drawing.Point(75, 319);
             this.txtTelepon.Multiline = true;
             this.txtTelepon.Name = "txtTelepon";
             this.txtTelepon.Size = new System.Drawing.Size(455, 33);
@@ -112,7 +114,7 @@
             // 
             this.Telepon.AutoSize = true;
             this.Telepon.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Telepon.Location = new System.Drawing.Point(226, 282);
+            this.Telepon.Location = new System.Drawing.Point(68, 275);
             this.Telepon.Name = "Telepon";
             this.Telepon.Size = new System.Drawing.Size(148, 41);
             this.Telepon.TabIndex = 6;
@@ -120,7 +122,7 @@
             // 
             // txtAlamat
             // 
-            this.txtAlamat.Location = new System.Drawing.Point(233, 404);
+            this.txtAlamat.Location = new System.Drawing.Point(75, 397);
             this.txtAlamat.Multiline = true;
             this.txtAlamat.Name = "txtAlamat";
             this.txtAlamat.Size = new System.Drawing.Size(455, 33);
@@ -130,7 +132,7 @@
             // 
             this.Alamat.AutoSize = true;
             this.Alamat.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Alamat.Location = new System.Drawing.Point(226, 360);
+            this.Alamat.Location = new System.Drawing.Point(68, 353);
             this.Alamat.Name = "Alamat";
             this.Alamat.Size = new System.Drawing.Size(132, 41);
             this.Alamat.TabIndex = 8;
@@ -186,12 +188,34 @@
             this.dgvMahasiswa.Size = new System.Drawing.Size(928, 357);
             this.dgvMahasiswa.TabIndex = 14;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(605, 91);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(180, 82);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Import";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(605, 275);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(180, 101);
+            this.button2.TabIndex = 16;
+            this.button2.Text = "Analys";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(917, 982);
+            this.ClientSize = new System.Drawing.Size(1617, 982);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvMahasiswa);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnDelete);
@@ -233,6 +257,8 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridView dgvMahasiswa;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 
