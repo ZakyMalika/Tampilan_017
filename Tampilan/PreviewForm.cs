@@ -13,7 +13,7 @@ namespace Tampilan
 {
     public partial class PreviewForm : Form
     {
-        private string connectionString = "Data Source=DESKTOP-K2MUUDE\\ZAKYMALIKA; Initial Catalog=MahasiswaDB;Integrated Security =True";
+        private string connectionString = "Data Source=DESKTOP-K2MUUDE\\ZAKYMALIKA; Initial Catalog=OrganisasiMahasiswa;Integrated Security =True";
 
         public PreviewForm(DataTable data)
         {

@@ -18,7 +18,7 @@ namespace Tampilan
     public partial class Form1 : Form
     {
 
-        private string connectionString = "Data Source=DESKTOP-K2MUUDE\\ZAKYMALIKA; Initial Catalog=MahasiswaDB;Integrated Security =True";
+        private string connectionString = "Data Source=DESKTOP-K2MUUDE\\ZAKYMALIKA; Initial Catalog=OrganisasiMahasiswa;Integrated Security =True";
 
         private readonly MemoryCache _cache = MemoryCache.Default;
         private readonly CacheItemPolicy _policy = new CacheItemPolicy
@@ -45,6 +45,8 @@ namespace Tampilan
             txtAlamat.Clear();
             txtTelepon.Clear();
             dgvMahasiswa.ClearSelection();
+
+            txtNIM.Focus();
         
         }
         private void EnsureIndexes()
